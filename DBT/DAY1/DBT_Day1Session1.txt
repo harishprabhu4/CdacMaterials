@@ -1,0 +1,414 @@
+			DBT-Data base Technologies
+
+- JDBC
+- DATA BASE WITH JAVA
+- statement
+- prepared statement
+  get the data from table
+  we do logic
+
+- calable statement
+   -invoke the procedure get the result in java
+
+
+
+DBT-Data base Technologies
+
+introduction to DBMs
+data modal
+normalization
+er-diagram
+codd rules
+
+
+-SQL - intract data base
+
+select
+create
+- database
+
+delete
+upate
+joins
+subqueries
+
+
+-MYSQL PROGRAMMING - ralational database
+- interms of table
+
+- programming consturct
+
+if
+while
+case
+arithmetic
+logical
+- sql
+
+strored procedure
+- get stored in database itself
+
+-result can be displayed to the user
+-write back to the table
+
+strored function
+
+triggers
+
+
+
+
+-mongoDb-NoSql- data is not stored in form rows and column
+or in table
+- document based
+json - format
+
+- java with mongodb
+
+
+
+mysql
+Oracle
+sybase
+mysql
+
+
+- web based java
+- web technologies
+- project
+
+8 to 9 days
+1 Day exam
+
+3 day sql
+
+2 day of mysql programming
+
+2 day of mongoDb
+
+1 we use java to intract mysql(calable),mongodb
+
+1- revision
+
+
+introduction to DBMS
+
+
+what is data
+
+- is fact is recored in computer 
+- raw information
+- text ,number image, speach
+
+  name of employee,
+  product price
+
+Data base
+
+- data base is a collection of data
+- data base is helps us to organize the data
+- or construct the data
+- it helps us to manipulate the data
+
+Data base management System(DBMS)
+
+Data Base + Management System or software
+
+- is a set program whis helps to construct and manipulate the data 
+
+
+where all we use
+
+airlines- ticket,customer,shedule
+college - student,department,course
+banking - transaction
+share market
+
+
+advantage of DBMS
+
+1)control data redundancy
+
+2)Data sharing
+  - centralized data
+  - more then one user -can share the data
+
+3)backup
+  - data recovery
+
+4)multiple user interface
+  msql- command line
+      - workbench
+      - java
+
+
+Evaluation of data base
+1968
+
+- file system - to store data
+- stored in hardisk
+- file with java- to read write data
+- 
+1968-1980
+
+ hierarchical model
+
+- data stored in tree kind of structoe
+- node
+- relationship
+
+network model
+
+- similar to hierarchical
+- between node they establised relation
+
+
+Relational data base model
+1970- E.F codd
+
+- data stored in table
+- rows and column
+- relation between more than one table
+
+
+mysql
+oracle
+sybase
+
+
+noSql database
+
+- document based
+- json format
+- mongodb
+
+
+centralised databse
+server- filled with data
+can be accesed using cloud platform
+-cloud base
+Aws
+Oracle Databse cloud Service
+Google cloud
+
+- one serer is full
+- data will stored in different server
+
+
+
+RDBms
+
+mysql - data base
+
+Sql - 
+
+table
+record- one complete row
+field- colum- 
+
+Sql
+
+DML - Data manipulation 
+
+SELECT
+UPDATE
+DELETE
+INSERT
+
+DDL - Data difination
+
+CREATE
+ALTER
+TRUNCATE
+DROP
+
+
+DCL - data contrl 
+grant
+invoke
+
+TCL-  transation control
+commit
+role back
+
+
+data type
+
+string 
+
+char()
+varchar()
+blob
+tinychar
+
+numeric
+
+int-integer
+tiniyint
+decimal(7,2)- 
+double(7,2)- floating point
+float
+
+DATE 
+DATETIME
+TIMESTAMP
+
+
+break
+11-45 
+
+
+Sql
+
+dml
+ddl
+dcl
+tcl
+
+
+Create
+insert
+update
+alter
+drop
+druncate
+delete
+
+Select
+where
+
+arithmetic
+logical operator
+like
+null
+between
+
+order by
+group by 
+having 
+
+1) system cls;- to clear the screen
+
+2) create datable
+
+3) use database
+
+
+1)create table <table name>
+(
+
+   column name data type,
+   column name data type,
+
+)
+
+
+create table stu 
+(
+    sid  int,
+    sname varchar(20),
+    subject varchar(10),
+    mark  int
+      
+)
+
+
+2) insert- insert data to the dable
+
+  insert into stu values(1002,	'Abhay Verma',  'java', 50),
+                  
+                         (1003,	'Abhirath Gururaj', 'c++' , 60),
+
+			(1004	,'Aditya Shriram', 'dbt', 70)
+
+
+- insert to a specific column
+
+   insert into stu(sid,sname,subject) values(1005,'vishal','java');
+
+
+select- to retrive values/data from table
+
+SELECT ALL - select * 
+
+select perticuler data, 
+
+select column name from table;
+
+
+null
+0
+
+update - update the data in the table
+
+update stu set mark = 60 
+where sid = 1005;
+
+TCL
+
+commit 0;
+commit;
+and rollback
+
+alter- is used to alter or change the sturcture of the
+       table;
+
+alter
+  add
+  modify
+  
+
+
+desc- display the structure of the table
+
+alter table stu add result varchar(10);
+
+alter table stu modify sid int(20);
+
+insert into stu values(50181010,'Anjali Varma','python',40,'pass');
+
+- rename the table
+
+alter table stu rename to student;
+
+delete from stu where sid = 1006;
+- you can roll back
+
+truncate- it will delete all data permanently
+        - sturcture is maintained and all data will be 	        -deleted
+        - can not roll back data
+
+
+drop
+
+
+truncate
+
+drop
+
+
+DML
+
+Select
+
+emp
+
+dept
+
+
+
+
+
+
+
+Mysql
+mysql 8.- instalation
+- mysql workbench- ide - to work on sql
+- command line>
+- note pad
+- HeidiSQL
+
+Sql
+
+
+

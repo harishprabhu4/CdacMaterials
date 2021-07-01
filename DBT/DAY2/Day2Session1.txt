@@ -1,0 +1,384 @@
+DBT
+
+introduction to databse
+
+sql
+
+mysql programming
+
+mongodb
+
+data
+introduction to databse
+dbms
+Rdbms-
+mysql,oralce
+how to create database
+use database
+create table
+sQL
+
+DML
+SELECT
+WHERE
+
+- arithmetic
+- logical operator
+- between
+- in
+- like
+- null
+
+DELTE
+
+DDL
+CREATE
+INSERT
+ALTER
+DROP
+TRUCATE
+DCL
+TCL
+
+
+sCHEMA AND INSTANCE
+CODD'S RULES
+
+CONSTRATINS
+-
+SELECT
+  WHERE
+  GROUP BY
+  HAVING 
+  ORDER BY
+
+- GROUP FUNCTION- AGGRIGATE FUNCTION
+- STRING FUNCTION
+- DATE FUNCTION
+
+
+CREATE TABLE
+ - with out constrains
+
+CONSTRATINS
+ - is used to specify the rule
+   that allows or restricts what values /data will be stored in the table
+
+constrains can also be alter using alter table
+
+ available constrains
+
+primary key
+foreign key
+
+unique
+null
+default
+check
+
+composite key
+
+
+CREATE TABLE Student
+(  
+  sid int not null,  
+  sname varchar(20),  
+  subject varchar(10),  
+  marks int  
+);  
+- not null can be applied more than one field
+
+CREATE TABLE Student
+(  
+  sid int unique,  
+  sname varchar(20),  
+  subject varchar(10),  
+  marks int  
+); 
+- not null can be applied more than one field
+- it will allow null
+
+primary key
+- is the combination of not null , unicque
+- it wont allow dublicate
+- uniquely identifies each row
+
+CREATE TABLE Student
+(  
+  sid int primary key,  
+  sname varchar(20),  
+  subject varchar(10) default 'java',  
+  marks int  
+);
+
+check subject('c++, 'java')
+
+
+drop table student;
+
+CREATE TABLE Student
+(  
+  sid int primary key,  
+  sname varchar(20),  
+  subject varchar(10), 
+  marks int,
+  cid int
+ );
+
+schema
+
+CREATE TABLE Student
+(  
+  sid int primary key,  
+  sname varchar(20),  
+  subject varchar(10), 
+  marks int,
+  cid int 
+ );
+
+CREATE TABLE course
+(  
+  cid int primary key,  
+  cname varchar(20),  
+  fname varchar(10) 
+   
+ );
+
+alter table student add constraint stu_cour_fk 
+foreign key(cid)
+references course(cid);
+
+show create table student;
+ 
+ALTER TABLE student
+DROP FOREIGN KEY stu_cour_fk;
+
+
+select COLUMN_NAME, CONSTRAINT_NAME, REFERENCED_COLUMN_NAME, REFERENCED_TABLE_NAME
+from information_schema.KEY_COLUMN_USAGE
+where TABLE_NAME = 'student';
+
+emp
+empno pk
+
+
+deptno foreign
+
+
+
+dept
+deptno pk
+
+
+
+foreign key
+
+-refential integrity
+-parent child relation 
+-point to primary key of another table
+
+drop contraint stu_cour_fk from course;
+
+- if you set the forgien key (cid)
+- parent child relation
+- if no data in parent
+  it wont allow to insert record of cid
+  if it is not exist in parent- cid
+
+- you cannot delete record from child
+  with out deleting corre ponding entry in  parent
+
+ deleting record - 501 in COURSE;
+
+first
+ delete 501 from STUDENT;
+
+ 
+you cannot insert 501 in student
+
+with 501 in course;
+
+
+primary key
+-
+ 11- 45 
+thank you
+
+ON DELETE CASCADE
+
+
+
+
+- TO REtrive data from the datable
+
+SELECT
+  WHERE
+  ORDER BY
+  GROUP BY
+  HAVING 
+
+agricate function
+date function
+string function
+join
+subquery
+----------------------------------------
+
+nULL
+select * from emp where comm IS NOT NULL;
+select * from emp where comm IS NOT NULL;
+SELECT EMPNO,SAL ,SAL+ IFNULL(COMM ,0) FROM EMP;
+
+ORDER BY - SORTING THE DATA 
+         - DEFAULT sorting is asc
+SELECT * FROM EMP ORDER BY SAL
+
+SELECT * FROM EMP ORDER BY SAL desc
+
+SELECT deptno,sal FROM EMP ORDER BY deptno ,SAL desc ;
+
+SELECT deptno,sal FROM EMP ORDER BY deptno ,SAL desc ;
+
+SELECT deptno,sal FROM EMP ORDER BY deptno ,SAL desc  limit 5;
+
+- who is having highest sal
+
+SELECT deptno,sal FROM EMP ORDER BY deptno ,SAL desc;  
+
+agricate function group function
+
+min()
+max()
+avg()
+sum()
+count()
+
+how many emp are there in emp tbale;
+select count(*) from emp;
+select max(sal) ,min(sal),avg(sal) from emp;
+- find how many emp are there in dept 20;
+select count(*) from emp where deptno = 20;
+select  deptno,sum(sal) from emp where deptno = 30;
+
+group by - 
+
+select  deptno,sum(sal) from emp group by deptno;
+- whichever column you are using in group by clause
+  can be retrived in select
+
+ select job, count(*) from emp 
+ group by job;  
+
+
+- list deptno which having more than 3 people
+
+select deptno, count(deptno) from emp 
+group by deptno
+having count(*)>3; 
+
+select deptno,sum(sal) from emp
+group by deptno;
+
+- list the deptno having total sal
+  more than 10000
+
+select deptno,sum(sal) from emp
+group by deptno
+having sum(sal)>10000;
+
+select
+where- apply condition on column
+order by
+group by
+having - apply condition on group function
+
+
+student
+
+select cid, count(*) from student
+group by cid
+having count(*)>50;
+
+501 - 100
+502 - 50
+
+string function
+date function
+scheme ,instance
+codd rule
+
+length
+upper
+lower
+substring
+
+date
+
+join
+subquery
+
+2.30 lab - 15 theory
+constraint
+select
+  where
+  group by
+  having
+- aggricate functions
+
+
+join
+subquery
+view
+index
+
+CREATE TABLE student (    SID int NOT NULL,    sname varchar(255) NOT NULL,    Subject varchar(20),         marks int CHECK (marks>=80));
+
+
+how can we show 2 digit after decimal in avg() function
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
